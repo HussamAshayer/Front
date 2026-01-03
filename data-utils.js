@@ -3,7 +3,7 @@ import { supabase } from "./supabase";
 export const getDetectionsFromSupabase = async () => {
   const { data, error } = await supabase
     .from("espData")
-    .select("anchor_id, ssid, detected_bt, rssi, block_number,mac")
+    .select("anchor_id, ssid, rssi, block_number,mac")
     .limit(50);
 
   if (error) {
