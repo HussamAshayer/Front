@@ -89,9 +89,9 @@ function Dashboard({ onLogout }) {
     }
   };
 
-  // useEffect(() => {
-  //   fetchFromSupabase();
-  // }, []);
+  useEffect(() => {
+    fetchFromSupabase();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(fetchFromSupabase, 9000);
